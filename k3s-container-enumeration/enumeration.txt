@@ -1,0 +1,16 @@
+# Container enumeration
+
+id
+
+ls -la /run/k3s/containerd/containerd.sock
+
+which ctr
+which crictl
+
+find / -name "*.sock" 2>/dev/null
+
+ls -la /var/lib/rancher/k3s/
+
+crictl --runtime-endpoint unix://run/k3s/conntainerd/containerd.sock ps
+
+ps aux
